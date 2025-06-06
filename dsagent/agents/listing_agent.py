@@ -1,5 +1,6 @@
 from ..agent_manager import Agent
 
+
 class ListingAgent(Agent):
     """Creates eBay listings using GPT-generated descriptions."""
 
@@ -11,7 +12,7 @@ class ListingAgent(Agent):
     def run(self):
         # Placeholder implementation
         prompt = (
-            "Generate an appealing product title and description for a tech gadget." 
+            "Generate an appealing product title and description for a tech gadget."
             "Output in JSON with 'title' and 'description' fields."
         )
         listing_info = self.openai_client.chat_completion(prompt)

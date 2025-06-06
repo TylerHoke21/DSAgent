@@ -1,5 +1,6 @@
 from ..agent_manager import Agent
 
+
 class ResearchAgent(Agent):
     """Performs product research using GPT."""
 

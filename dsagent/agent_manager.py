@@ -1,13 +1,16 @@
 import logging
 from typing import List
 
+
 class Agent:
     """Base class for all agents."""
+
     def __init__(self, name: str):
         self.name = name
 
     def run(self, *args, **kwargs):
         raise NotImplementedError
+
 
 class AgentManager:
     """Coordinates multiple agents."""
@@ -22,7 +25,7 @@ class AgentManager:
             result = agent.run()
             if not self.auto_mode:
                 cont = input(f"Continue after {agent.name}? (y/n) ").lower()
-                if cont != 'y':
+                if cont != "y":
                     print("Stopping execution per user request.")
                     break
         print("All agents complete.")

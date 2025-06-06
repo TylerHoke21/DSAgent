@@ -1,5 +1,6 @@
 from ..agent_manager import Agent
 
+
 class SupportAgent(Agent):
     """Handles customer support inquiries."""
 

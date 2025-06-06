@@ -1,5 +1,6 @@
 from ..agent_manager import Agent
 
+
 class OrderAgent(Agent):
     """Handles order fulfillment logic."""
 
