@@ -1,4 +1,5 @@
 """Simple orchestration script for DSAgent."""
+import logging
 from .openai_client import OpenAIClient
 from .ebay_api import EbayAPI
 from .supplier_api import SupplierAPI
@@ -10,6 +11,7 @@ from .agents.support_agent import SupportAgent
 
 
 def main(auto: bool = False):
+    logging.basicConfig(level=logging.INFO)
     openai_client = OpenAIClient()
     ebay_api = EbayAPI()
     supplier_api = SupplierAPI()
