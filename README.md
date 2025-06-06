@@ -18,6 +18,6 @@ must supply real API keys and business logic for production use.
 ## Quick Start
 
 ```bash
-pip install openai
+pip install -r requirements.txt
 python -m dsagent.main --auto  # run in autonomous mode
 ```
