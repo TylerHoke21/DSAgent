@@ -1,12 +1,13 @@
 """Simple orchestration script for DSAgent."""
-from .openai_client import OpenAIClient
-from .ebay_api import EbayAPI
-from .supplier_api import SupplierAPI
+
 from .agent_manager import AgentManager
-from .agents.research_agent import ResearchAgent
 from .agents.listing_agent import ListingAgent
 from .agents.order_agent import OrderAgent
+from .agents.research_agent import ResearchAgent
 from .agents.support_agent import SupportAgent
+from .ebay_api import EbayAPI
+from .openai_client import OpenAIClient
+from .supplier_api import SupplierAPI
 
 
 def main(auto: bool = False):
@@ -22,6 +23,7 @@ def main(auto: bool = False):
     ]
     manager = AgentManager(agents, auto_mode=auto)
     manager.run_all()
+
 
 if __name__ == "__main__":
     import argparse

@@ -1,6 +1,7 @@
 """Thin wrapper around OpenAI API calls."""
-from typing import Any
+
 import os
+from typing import Any
 
 try:
     import openai
