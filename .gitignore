@@ -1,0 +1,22 @@
+# Byte-compiled / optimized files
+*.py[cod]
+
+# Python cache directories
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environment directories
+.venv/
+venv/
+env/
+
+# Editor directories
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+
+# Python compiled files
+*.pyc
