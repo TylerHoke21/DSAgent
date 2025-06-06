@@ -22,7 +22,15 @@ def main(auto: bool = False):
         SupportAgent(openai_client),
     ]
     manager = AgentManager(agents, auto_mode=auto)
-    manager.run_all()
+    results = manager.run_all()
+
+    # Display results when not running in fully autonomous mode so the user can
+    # review what each agent produced.  In auto mode the agents themselves may
+    # print output, so showing the collected list is optional.
+    if not auto:
+        print("Run results:")
+        for res in results:
+            print(res)
 
 
 if __name__ == "__main__":
