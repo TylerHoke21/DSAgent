@@ -1,5 +1,9 @@
 """Simple orchestration script for DSAgent."""
 
+import logging
+
+logging.basicConfig(level=logging.INFO)
+
 from .agent_manager import AgentManager
 from .agents.listing_agent import ListingAgent
 from .agents.order_agent import OrderAgent
